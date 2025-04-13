@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Maxime Marie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./main.js/script.js"></script>
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+    /* Only expand collapse items within the CV section */
+    #cv .collapse {
+      width: 100%;
+    }
+    
+    @keyframes neon-flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+          opacity: 1;
+      }
+      20%, 24%, 55% {
+          opacity: 0;
+      }
+    }
+    .flicker {
+      animation: neon-flicker 2.0s infinite;
+    }
+    @keyframes pulse-correct {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes shake-wrong {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+    .correct-anim {
+      animation: pulse-correct 0.3s ease-in-out;
+    }
+    .wrong-anim {
+      animation: shake-wrong 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-900 p-4 text-white flex justify-between items-center shadow-lg">
+    <h1 class="text-cyan-400 text-lg font-bold drop-shadow-lg flicker">David martinez</h1>
+    <div class="space-x-4">
+      <button onclick="showSection('cv')" class="hover:text-pink-400 transition duration-300">CV</button>
+      <button onclick="showSection('quiz')" class="hover:text-purple-400 transition duration-300">Quiz</button>
+      <button onclick="showSection('calc')" class="hover:text-blue-400 transition duration-300">Calculatrice</button>
+    </div>
+  </nav>
+
+  <main class="p-6 flex-grow">
+    <!-- CV Section -->
+    <section id="cv" class="transition-all duration-500 fade-enter">
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Sidebar -->
+        <aside class="bg-gray-800/60 p-6 rounded-lg md:col-span-1 shadow-lg backdrop-blur-md">
+          <h2 class="text-xl font-bold text-pink-400">Informations</h2>
+          <p class="text-gray-400">Étudiant</p>
+          <div class="mt-4 space-y-2">
+            <p><strong>Email:</strong> David.martinez@gmail.com</p>
+            <p><strong>Téléphone:</strong> 06.82.39.41.02</p>
+            <p><strong>Adresse:</strong> Night City Megabuilding H4 (formerly)</p>
+            <p><strong>Recrutement:</strong> <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300">contactez Faraday</a></p>
+          </div>
+          <h3 class="mt-6 text-lg font-bold text-pink-400">Compétences</h3>
+          <ul class="mt-2 space-y-1 text-sm">
+            <li>✅ Adaptabilité</li>
+            <li>✅ Sportif</li>
+            <li>✅ Disponibilité</li>
+            <li>✅ Numérique</li>
+            <li>✅ Sandevistan ready</li>
+          </ul>
+        </aside>
+
+        <!-- Main CV Content -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="collapse collapse-arrow bg-gray-800 text-white shadow-md">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-bold peer-hover:text-cyan-400">Profil</div>
+            <div class="collapse-content text-gray-300">
+              <p>Diplômé de la prestigieuse Tour Arasaka, j'ai forgé mes compétences grâce à un parcours exigeant et innovant.
+               <p>.</p>
+                <p> Durant mes trois années d'études intensives, j'ai su tirer profit de chaque opportunité de formation, développant des techniques avancées en stratégie, combat rapproché et cybernétique.
+                    </p>
+                    <p>.</p>
+                    <p> Aujourd'hui, en tant que mercenaire chevronné surnommé "Sandevistan de Santo", je mène avec brio des missions stratégiques dans l'univers cyberpunk.
+                        <p> Mon expertise en hacking, combat tactique et négociation me positionne comme un atout indispensable lors d’opérations à haut risque. </p>
+                    </p>
+                    </p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-gray-800 text-white shadow-md">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-bold peer-hover:text-cyan-400">Formation</div>
+            <div class="collapse-content text-gray-300">
+              <p><strong>Tour Arasaka</strong> - Corpo plaza, Night City (2073 - 2076)</p>
+              <p><strong>Cyberpunk</strong> - Faraday, Night City (2076 - 2076)</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-gray-800 text-white shadow-md">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-bold peer-hover:text-cyan-400">Biographie</div>
+            <div class="collapse-content text-gray-300">
+              <p>Né dans les quartiers délabrés de Santo Domingo et élevé dans l'ombre imposante du Megabuilding H4 à Night City, mon parcours a été forgé dans la lutte et la résilience dès le plus jeune âge. Élevé par une mère courageuse dans un environnement aux ressources limitées, j'ai appris rapidement que chaque décision pouvait être une question de survie.</p>
+              <p>Mon entrée à l'académie Arasaka fut le début d'une odyssée où l'exigence et la rigueur se mêlaient aux promesses de technologies avancées et de stratégies complexes. Confronté à un système rigide qui ne répondait plus à mes ambitions, j'ai choisi d'abandonner la voie traditionnelle pour embrasser pleinement celle de l'Edgerunner.</p>
+              <p>Équipé d'un arsenal d'outils illégaux et d'une détermination sans faille, j'ai transformé les épreuves en opportunités, bâtissant une réputation de spécialiste de la reconnaissance et de la résolution de crises. Mon engagement envers une justice réinventée, dans un univers dominé par la corruption, m'a permis de devenir un mercenaire respecté, déterminé à réécrire les règles du jeu dans la mégalopole de Night City.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Quiz Section -->
+    <section id="quiz" class="hidden flex items-center justify-center">
+      <div class="max-w-2xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg mt-6">
+        <h2 id="quiz-question" class="text-2xl font-bold text-white mb-4">Loading question...</h2>
+        <div id="quiz-answers" class="grid gap-2 mb-6"></div>
+        <div class="flex justify-between flex-wrap gap-2">
+          <button id="quiz-prev" class="btn btn-secondary" disabled>Previous</button>
+          <button id="quiz-next" class="btn btn-primary" disabled>Next</button>
+          <button id="brute-force" class="btn btn-error ml-auto">Brute Force</button>
+        </div>
+        <div id="quizResult" class="mt-4 text-center text-green-400 font-bold"></div>
+      </div>
+    </section>
+    
+    <!-- Calculatrice Section -->
+    <section id="calc" class="hidden flex flex-col items-center justify-center">
+      <div class="text-blue-400 text-2xl font-bold mb-4">Calculatrice</div>
+      <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <input type="text" id="calcInput" class="input input-bordered w-full mb-4 text-white" placeholder="0">
+        <div class="grid grid-cols-4 gap-2">
+          <button onclick="appendCalc('7')" class="btn">7</button>
+          <button onclick="appendCalc('8')" class="btn">8</button>
+          <button onclick="appendCalc('9')" class="btn">9</button>
+          <button onclick="appendCalc('/')" class="btn btn-accent">/</button>
+          <button onclick="appendCalc('4')" class="btn">4</button>
+          <button onclick="appendCalc('5')" class="btn">5</button>
+          <button onclick="appendCalc('6')" class="btn">6</button>
+          <button onclick="appendCalc('*')" class="btn btn-accent">*</button>
+          <button onclick="appendCalc('1')" class="btn">1</button>
+          <button onclick="appendCalc('2')" class="btn">2</button>
+          <button onclick="appendCalc('3')" class="btn">3</button>
+          <button onclick="appendCalc('-')" class="btn btn-accent">-</button>
+          <button onclick="appendCalc('0')" class="btn">0</button>
+          <button onclick="appendCalc('.')" class="btn">.</button>
+          <button onclick="calculateResult()" class="btn btn-success">=</button>
+          <button onclick="appendCalc('+')" class="btn btn-accent">+</button>
+          <button onclick="clearCalc()" class="btn btn-error col-span-4">C</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-center text-white p-4 mt-auto">
+    <p>&copy; 2025 Maxime Marie - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = ['cv', 'quiz', 'calc'];
+      sections.forEach(id => {
+        const section = document.getElementById(id);
+        section.classList.toggle('hidden', sectionId !== id);
+        section.classList.toggle('animate-fade-in', sectionId === id);
+      });
+      if (sectionId === 'quiz') loadQuestion();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const style = document.createElement('style');
+      style.innerHTML = `
+          @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(10px); }
+              to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+              animation: fadeIn 0.5s ease-in-out;
+          }
+      `;
+      document.head.appendChild(style);
+    });
+
+    function appendCalc(char) {
+      document.getElementById('calcInput').value += char;
+    }
+    function clearCalc() {
+      document.getElementById('calcInput').value = '';
+    }
+    function calculateResult() {
+      const input = document.getElementById('calcInput');
+      try {
+          input.value = eval(input.value);
+      } catch {
+          input.value = 'Erreur';
+      }
+    }
+
+    const questions = [
+      { question: "comment s'appelle le 1er implant de david ?", answers: ["Sandevistan", "Monkey arms", "mantis blade", "'rien"], correctIndex: 0 },
+      { question: "Quel était l'école de David ?", answers: ["biologie numérique", "DRX", "Arasaka", "Corpo"], correctIndex: 2 },
+      { question: "Comment s'appelle la petite amie de david?", answers: ["Rebecca", "Lucy", "Panam", "Judy"], correctIndex: 1 },
+    ];
+
+    let currentQuestionIndex = 0;
+    let selectedAnswers = {};
+    const questionEl = document.getElementById("quiz-question");
+    const answersEl = document.getElementById("quiz-answers");
+    const prevBtn = document.getElementById("quiz-prev");
+    const nextBtn = document.getElementById("quiz-next");
+    const resultEl = document.getElementById("quizResult");
+
+    function loadQuestion() {
+      const q = questions[currentQuestionIndex];
+      questionEl.textContent = `Question ${currentQuestionIndex + 1}: ${q.question}`;
+      answersEl.innerHTML = "";
+      q.answers.forEach((answer, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.className = "btn m-1 px-4 py-2 rounded border";
+        if (selectedAnswers[currentQuestionIndex] !== undefined) {
+          btn.disabled = true;
+          const selected = selectedAnswers[currentQuestionIndex];
+          if (index === selected) {
+            btn.classList.add(index === q.correctIndex ? "bg-green-500" : "bg-red-500");
+          }
+          if (index === q.correctIndex && selected !== q.correctIndex) {
+            btn.classList.add("bg-green-300");
+          }
+        } else {
+          btn.onclick = () => selectAnswer(index);
+        }
+        answersEl.appendChild(btn);
+      });
+      prevBtn.disabled = currentQuestionIndex === 0;
+      nextBtn.disabled = selectedAnswers[currentQuestionIndex] === undefined;
+      resultEl.innerHTML = "";
+    }
+
+    function selectAnswer(index) {
+      selectedAnswers[currentQuestionIndex] = index;
+      const isCorrect = index === questions[currentQuestionIndex].correctIndex;
+      const buttons = answersEl.querySelectorAll("button");
+      const selectedBtn = buttons[index];
+      selectedBtn.classList.add(isCorrect ? "correct-anim" : "wrong-anim");
+      setTimeout(loadQuestion, 350);
+    }
+
+    nextBtn.onclick = () => {
+      if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion();
+      } else {
+        showScore();
+      }
+    };
+
+    prevBtn.onclick = () => {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion();
+      }
+    };
+
+    function showScore() {
+      let score = 0;
+      questions.forEach((q, i) => {
+        if (selectedAnswers[i] === q.correctIndex) score++;
+      });
+      resultEl.innerHTML = `<p class="text-lg font-bold text-green-500">Your score: ${score} / ${questions.length}</p>`;
+    }
+  </script>
+</body>
+</html>
